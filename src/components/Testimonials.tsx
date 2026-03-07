@@ -7,21 +7,21 @@ import { Quote } from 'lucide-react';
 const testimonials = [
     {
         quote: "Amrielle completely transformed how I'm perceived online. The attention to detail and strategic direction was unmatched.",
-        author: "Sarah Jenkins",
+        author: "Aditi Sharma",
         title: "Founder & CEO, TechFlow",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=200&auto=format&fit=crop"
     },
     {
         quote: "Working with them was the best investment for my brand. My engagement skyrocketed and I attracted high-ticket clients almost immediately.",
-        author: "Marcus Doe",
+        author: "Rahul Verma",
         title: "Executive Coach",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=200&auto=format&fit=crop"
     },
     {
         quote: "They don't just create pretty graphics; they build magnetic identities. I finally feel confident sending leads to my profile.",
-        author: "Elena Rivera",
+        author: "Priya Desai",
         title: "Creative Director",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&auto=format&fit=crop"
     }
 ];
 
