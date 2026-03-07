@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
+import Process from '@/components/Process';
 import { motion } from 'framer-motion';
 import { PenTool, Target, Image as ImageIcon, TrendingUp } from 'lucide-react';
 
@@ -95,6 +96,7 @@ export default function ServicesPage() {
                 </div>
             </div>
 
+            <Process />
             <CTA />
             <Footer />
         </main>
