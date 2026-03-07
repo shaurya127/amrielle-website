@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Menu } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -11,7 +11,13 @@ import logoImg from '@/assets/logo.png';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const pathname = usePathname();
+
+    // Close mobile menu on route change
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -61,9 +67,62 @@ export default function Header() {
             </nav>
 
             {/* Mobile Menu Button - can be wired later to a drawer if needed */}
-            <button aria-label="Menu" className="md:hidden p-2 hover:bg-black/5 rounded-full transition-colors text-foreground">
+            <button
+                aria-label="Menu"
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="md:hidden p-2 hover:bg-black/5 rounded-full transition-colors text-foreground"
+            >
                 <Menu className="w-6 h-6" />
             </button>
+
+            {/* Mobile Drawer */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-[60] md:hidden"
+                        />
+
+                        {/* Drawer Map */}
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white shadow-2xl z-[70] flex flex-col px-6 py-8 md:hidden"
+                        >
+                            <div className="flex justify-end mb-8">
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="p-2 hover:bg-black/5 rounded-full transition-colors text-foreground"
+                                >
+                                    <X className="w-6 h-6" />
+                                </button>
+                            </div>
+
+                            <nav className="flex flex-col gap-6">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className={cn(
+                                            "text-2xl font-serif font-bold tracking-wide transition-colors hover:text-accent",
+                                            pathname === link.href ? "text-accent" : "text-foreground"
+                                        )}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ))}
+                            </nav>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 }
