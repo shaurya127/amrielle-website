@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Footer() {
     return (
@@ -13,9 +14,9 @@ export default function Footer() {
                 transition={{ duration: 0.6 }}
                 className="flex flex-col items-center"
             >
-                <div className="text-4xl font-serif font-bold text-white mb-6">
+                <Link href="/" className="text-4xl font-serif font-bold text-white mb-6 inline-block">
                     Amrielle
-                </div>
+                </Link>
                 <p className="text-lg mb-12 text-white/80 font-sans max-w-md leading-relaxed">
                     Every story deserves to be seen in its best light.
                 </p>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function CTA() {
     return (
@@ -20,13 +21,15 @@ export default function CTA() {
                     Join the leaders who trust Amrielle to manage their digital presence.
                 </p>
 
-                <motion.button
-                    whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(255 255 255 / 0.3)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-10 py-5 bg-background text-foreground font-bold text-lg rounded-full shadow-2xl transition-all"
-                >
-                    Start Your Makeover
-                </motion.button>
+                <Link href="/contact" className="inline-block">
+                    <motion.div
+                        whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(255 255 255 / 0.3)" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-10 py-5 bg-background text-foreground font-bold text-lg rounded-full shadow-2xl transition-all inline-block cursor-pointer"
+                    >
+                        Start Your Makeover
+                    </motion.div>
+                </Link>
             </motion.div>
         </section>
     );

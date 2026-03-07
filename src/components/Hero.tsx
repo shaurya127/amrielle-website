@@ -3,6 +3,7 @@
 import React from 'react';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Hero() {
     const containerVariants: any = {
@@ -68,22 +69,26 @@ export default function Hero() {
                     variants={itemVariants}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mt-4"
                 >
-                    <motion.button
-                        whileHover={{ scale: 1.02, backgroundColor: "var(--foreground)", color: "#fff" }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full sm:w-auto px-8 py-4 rounded-full border border-foreground text-foreground font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
-                    >
-                        View Services
-                        <ArrowRight className="w-4 h-4" />
-                    </motion.button>
+                    <Link href="/services" className="w-full sm:w-auto">
+                        <motion.div
+                            whileHover={{ scale: 1.02, backgroundColor: "var(--foreground)", color: "#fff" }}
+                            whileTap={{ scale: 0.98 }}
+                            className="w-full sm:w-auto px-8 py-4 rounded-full border border-foreground text-foreground font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
+                        >
+                            View Services
+                            <ArrowRight className="w-4 h-4" />
+                        </motion.div>
+                    </Link>
 
-                    <motion.button
-                        whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgb(253 28 82 / 0.25), 0 8px 10px -6px rgb(253 28 82 / 0.25)" }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-accent to-pink-500 text-white font-semibold transition-all shadow-lg"
-                    >
-                        Contact Us
-                    </motion.button>
+                    <Link href="/contact" className="w-full sm:w-auto">
+                        <motion.div
+                            whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgb(253 28 82 / 0.25), 0 8px 10px -6px rgb(253 28 82 / 0.25)" }}
+                            whileTap={{ scale: 0.98 }}
+                            className="w-full cursor-pointer px-8 py-4 rounded-full bg-gradient-to-r from-accent to-pink-500 text-white font-semibold flex items-center justify-center transition-all shadow-lg"
+                        >
+                            Contact Us
+                        </motion.div>
+                    </Link>
                 </motion.div>
             </motion.div>
         </section>
