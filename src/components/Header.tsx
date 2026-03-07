@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import logoImg from '@/assets/logo.png';
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -37,7 +39,8 @@ export default function Header() {
                 scrolled ? "bg-background/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
             )}
         >
-            <Link href="/" className="text-2xl font-serif font-bold tracking-tight text-foreground cursor-pointer shrink-0">
+            <Link href="/" className="flex items-center gap-3 text-2xl font-serif font-bold tracking-tight text-foreground cursor-pointer shrink-0">
+                <Image src={logoImg} alt="Amrielle Logo" className="w-10 h-10 rounded-xl" />
                 Amrielle.
             </Link>
 
