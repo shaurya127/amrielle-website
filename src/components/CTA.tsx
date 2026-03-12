@@ -18,7 +18,7 @@ export default function CTA() {
                     Ready to own your story?
                 </h2>
                 <p className="text-lg md:text-2xl text-dark-foreground/80 mb-12 max-w-xl font-sans">
-                    Join the leaders who trust Amrielle to manage their digital presence.
+                    Work with Amrielle on strategy, content, design, and growth that actually reflects who you are.
                 </p>
 
                 <Link href="/contact" className="inline-block">
@@ -27,7 +27,7 @@ export default function CTA() {
                         whileTap={{ scale: 0.95 }}
                         className="px-10 py-5 bg-background text-foreground font-bold text-lg rounded-full shadow-2xl transition-all inline-block cursor-pointer"
                     >
-                        Start Your Makeover
+                        Start Your Brand Journey
                     </motion.div>
                 </Link>
             </motion.div>

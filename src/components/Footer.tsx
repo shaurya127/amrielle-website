@@ -20,8 +20,14 @@ export default function Footer() {
                 <p className="text-lg mb-12 text-white/80 font-sans max-w-md leading-relaxed">
                     Every story deserves to be seen in its best light.
                 </p>
+                <div className="text-sm text-white/75 font-sans mb-3">
+                    helloamrielle@gmail.com
+                </div>
+                <div className="text-sm text-white/75 font-sans mb-10">
+                    +91 94512 89100
+                </div>
                 <div className="text-sm opacity-60 font-sans">
-                    © {new Date().getFullYear()} Amrielle Branding. All rights reserved.
+                    © {new Date().getFullYear()} Amrielle Personal Branding. All rights reserved.
                 </div>
             </motion.div>
         </footer>

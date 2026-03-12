@@ -7,19 +7,19 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
     {
         question: "How long does a brand makeover take?",
-        answer: "Our typical full-scale brand strategy and visual identity completely takes 4-6 weeks. For ongoing content production and growth management, we operate on 3-month to 12-month retainers."
+        answer: "Timelines depend on the service. A profile makeover or CV optimization can move faster, while ongoing content, LinkedIn growth, and management work best as structured monthly engagements."
     },
     {
-        question: "Do you only work with founders?",
-        answer: "While founders and CEOs are our specialty, we also work with high-level executives, creators, and subject matter experts looking to productize their knowledge and command industry authority."
+        question: "Who do you work with?",
+        answer: "We work with founders, professionals, creators, and individuals who want a stronger personal brand, sharper positioning, and a more polished online presence."
     },
     {
         question: "What platforms do you specialize in?",
-        answer: "We focus on high-leverage platforms: LinkedIn for B2B authority, X (Twitter) for networking and thought leadership, and Instagram/YouTube for broader visual storytelling and community building."
+        answer: "Our strongest focus is LinkedIn and Instagram, including profiles, carousels, content strategy, post refinement, and visual assets for consistent brand building."
     },
     {
         question: "Do I need to write my own content?",
-        answer: "No. Our team handles the heavy lifting. Through deep-dive interviews and strategy sessions, we capture your unique voice and ghostwrite the content for you. You only need to review and approve."
+        answer: "No. We offer ghostwriting, content strategy, hooks, post refinement, and editing support. We shape the content around your voice so it still feels like you."
     }
 ];
 

@@ -54,15 +54,15 @@ export default function Hero() {
                     variants={itemVariants}
                     className="text-5xl md:text-7xl lg:text-[5rem] font-serif leading-[1.1] mb-6 text-foreground tracking-tight"
                 >
-                    We create brands that <br className="hidden md:block" />
-                    <span className="text-accent italic pr-2">stand out</span> from the first look.
+                    Every story deserves to be seen <br className="hidden md:block" />
+                    in its <span className="text-accent italic pr-2">best light.</span>
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
                     className="text-lg md:text-xl text-foreground/80 mb-10 max-w-2xl leading-relaxed font-sans"
                 >
-                    Amrielle is built on the belief that every story deserves to be seen in its best light. We turn your expertise into a magnetic online presence.
+                    Amrielle helps founders, professionals, and creators shape a personal brand that looks polished, sounds authentic, and grows with purpose.
                 </motion.p>
 
                 <motion.div

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function ContactSection() {
@@ -21,37 +21,45 @@ export default function ContactSection() {
                         Let's shape your<br />story.
                     </h2>
                     <p className="text-lg text-foreground/80 mb-12 leading-relaxed">
-                        Ready to stand out? Fill out the form or reach us directly. We'd love to hear about your goals.
+                        Ready to build a stronger online presence? Call or email us directly, or send a short message with your goals.
                     </p>
 
                     <div className="flex flex-col gap-8">
-                        <motion.div whileHover={{ scale: 1.02, x: 5 }} className="flex items-center gap-6 cursor-pointer group">
+                        <motion.a
+                            whileHover={{ scale: 1.02, x: 5 }}
+                            href="mailto:helloamrielle@gmail.com"
+                            className="flex items-center gap-6 cursor-pointer group"
+                        >
                             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                                 <Mail size={24} />
                             </div>
                             <div>
                                 <div className="font-bold text-foreground text-lg mb-1 group-hover:text-accent transition-colors">Email Us</div>
-                                <div className="text-foreground/70">hello@amrielle.com</div>
+                                <div className="text-foreground/70">helloamrielle@gmail.com</div>
                             </div>
-                        </motion.div>
+                        </motion.a>
 
-                        <motion.div whileHover={{ scale: 1.02, x: 5 }} className="flex items-center gap-6 cursor-pointer group">
+                        <motion.a
+                            whileHover={{ scale: 1.02, x: 5 }}
+                            href="tel:+919451289100"
+                            className="flex items-center gap-6 cursor-pointer group"
+                        >
                             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                                 <Phone size={24} />
                             </div>
                             <div>
                                 <div className="font-bold text-foreground text-lg mb-1 group-hover:text-accent transition-colors">Call Us</div>
-                                <div className="text-foreground/70">+1 (555) 000-0000</div>
+                                <div className="text-foreground/70">+91 94512 89100</div>
                             </div>
-                        </motion.div>
+                        </motion.a>
 
-                        <motion.div whileHover={{ scale: 1.02, x: 5 }} className="flex items-center gap-6 cursor-pointer group">
+                        <motion.div whileHover={{ scale: 1.02, x: 5 }} className="flex items-center gap-6 group">
                             <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                                <MapPin size={24} />
+                                <Users size={24} />
                             </div>
                             <div>
-                                <div className="font-bold text-foreground text-lg mb-1 group-hover:text-accent transition-colors">Office</div>
-                                <div className="text-foreground/70">123 Creative Ave, Branding City</div>
+                                <div className="font-bold text-foreground text-lg mb-1 group-hover:text-accent transition-colors">Founding Team</div>
+                                <div className="text-foreground/70">Ananya Rai, Samriddhi Rai, Navya Gupta</div>
                             </div>
                         </motion.div>
                     </div>
@@ -92,7 +100,7 @@ export default function ContactSection() {
                             <div className="flex flex-col gap-2">
                                 <label className="text-sm font-bold text-foreground inline-block">Message</label>
                                 <textarea
-                                    placeholder="Tell us about your brand..."
+                                    placeholder="Tell us what you need help with..."
                                     rows={4}
                                     className="w-full bg-background/50 border border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all resize-none focus:bg-white"
                                 />
@@ -104,7 +112,7 @@ export default function ContactSection() {
                                 type="button"
                                 className="w-full mt-2 bg-gradient-to-r from-accent to-pink-500 text-white font-bold text-lg py-5 rounded-xl shadow-lg transition-transform"
                             >
-                                Send Message
+                                Send Inquiry
                             </motion.button>
                         </form>
                     </div>

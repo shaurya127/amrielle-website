@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amrielle-website.vercel.app"),
   title: "Amrielle | Upscale Personal Branding Agency",
   description: "We create brands that stand out from the first look. Dedicated personal branding for founders, CEOs, and executives.",
   openGraph: {

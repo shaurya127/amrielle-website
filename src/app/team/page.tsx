@@ -5,15 +5,21 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Linkedin } from 'lucide-react';
-import ananyaImg from '@/assets/ananya.png';
-import navyaImg from '@/assets/navya.jpeg';
+import ananyaImg from '@/assets/ananya.jpg';
+import navyaImg from '@/assets/Navya.jpg';
+import samriddhiImg from '@/assets/samriddhi.jpg';
 
 const teamMembers = [
     {
         name: "Ananya Rai",
-        role: "Co-Founder",
+        role: "Founder",
         linkedin: "https://www.linkedin.com/in/ananya-rai-049a6a333/",
         image: ananyaImg.src
+    },
+    {
+        name: "Samriddhi Rai",
+        role: "Co-Founder",
+        image: samriddhiImg.src
     },
     {
         name: "Navya Gupta",
@@ -50,44 +56,46 @@ export default function TeamPage() {
                         className="text-center mb-16"
                     >
                         <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-                            Meet the Visionaries
+                            Meet the Founders
                         </h1>
                         <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-                            The creative minds driving Amrielle's vision and empowering brands to stand out.
+                            The team behind Amrielle, building thoughtful personal brands that feel clear, credible, and unforgettable.
                         </p>
                     </motion.div>
 
-                    {/* Team Grid */}
                     <motion.div
                         variants={container}
                         initial="hidden"
                         animate="show"
-                        className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-4xl mx-auto"
+                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 lg:gap-16 max-w-6xl mx-auto"
                     >
                         {teamMembers.map((member, index) => (
                             <motion.div key={index} variants={item} className="flex flex-col items-center group">
-                                {/* Image Card */}
                                 <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 shadow-2xl relative border border-foreground/5 bg-pink-100">
                                     <img
                                         src={member.image}
                                         alt={member.name}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    {/* Subtle overlay on hover */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                                        <a
-                                            href={member.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white hover:text-accent transition-colors"
-                                            aria-label={`${member.name} LinkedIn`}
-                                        >
-                                            <Linkedin size={24} />
-                                        </a>
+                                        {member.linkedin ? (
+                                            <a
+                                                href={member.linkedin}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white hover:text-accent transition-colors"
+                                                aria-label={`${member.name} LinkedIn`}
+                                            >
+                                                <Linkedin size={24} />
+                                            </a>
+                                        ) : (
+                                            <div className="bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase">
+                                                Co-Founder
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
-                                {/* Text Details */}
                                 <h3 className="text-2xl font-serif font-bold text-foreground mb-1">
                                     {member.name}
                                 </h3>

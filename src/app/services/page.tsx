@@ -6,28 +6,69 @@ import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import Process from '@/components/Process';
 import { motion } from 'framer-motion';
-import { PenTool, Target, Image as ImageIcon, TrendingUp } from 'lucide-react';
+import {
+    BadgeCheck,
+    Briefcase,
+    Camera,
+    FileText,
+    LayoutPanelTop,
+    Linkedin,
+    PenTool,
+    ScanText,
+    Sparkles,
+    WandSparkles
+} from 'lucide-react';
 
 const services = [
     {
-        icon: <Target size={32} strokeWidth={1.5} />,
-        title: "Brand Strategy",
-        description: "We dive deep into your unique value proposition to craft a strategy that positions you as an undeniable authority in your niche."
+        icon: <Sparkles size={32} strokeWidth={1.5} />,
+        title: "Personal Branding Strategy",
+        description: "Niche discovery, story building, and identity shaping for a brand that feels intentional and credible."
+    },
+    {
+        icon: <BadgeCheck size={32} strokeWidth={1.5} />,
+        title: "Profile Makeover & Optimization",
+        description: "Bio, tagline, banner, and profile picture refined for a clean and professional presence."
     },
     {
         icon: <PenTool size={32} strokeWidth={1.5} />,
-        title: "Content Creation",
-        description: "High-quality, engaging content that stops the scroll. From impactful writing to engaging video scripts, we do it all."
+        title: "Ghostwriting & Content Strategy",
+        description: "Content that sounds like you, builds authority, and grows your presence with consistency."
     },
     {
-        icon: <ImageIcon size={32} strokeWidth={1.5} />,
-        title: "Visual Identity",
-        description: "Premium aesthetics that make a lasting impression. We ensure your online presence is visually stunning and cohesive."
+        icon: <Linkedin size={32} strokeWidth={1.5} />,
+        title: "LinkedIn Growth",
+        description: "Steady, assured LinkedIn growth designed to help you reach your first 5K followers in 5 months."
     },
     {
-        icon: <TrendingUp size={32} strokeWidth={1.5} />,
-        title: "Growth & Analytics",
-        description: "Data-driven decisions to maximize your reach. We analyze what works and iterate to continually grow your audience."
+        icon: <WandSparkles size={32} strokeWidth={1.5} />,
+        title: "Hooks and Post Refinement",
+        description: "We sharpen your hooks and polish every post for stronger reach, retention, and virality."
+    },
+    {
+        icon: <Camera size={32} strokeWidth={1.5} />,
+        title: "Video and Photo Editing",
+        description: "High-quality edits for reels, posts, and brand visuals that look premium across platforms."
+    },
+    {
+        icon: <LayoutPanelTop size={32} strokeWidth={1.5} />,
+        title: "Carousels (LinkedIn & Instagram)",
+        description: "Scroll-stopping, clean carousel designs built for storytelling, clarity, and engagement."
+    },
+    {
+        icon: <FileText size={32} strokeWidth={1.5} />,
+        title: "CV Optimization and Resume Writing",
+        description: "Polished, industry-ready CVs and resumes that present your experience with confidence."
+    },
+    {
+        icon: <Briefcase size={32} strokeWidth={1.5} />,
+        title: "Page and Profile Management",
+        description: "End-to-end management of your online presence so your brand stays active, cohesive, and sharp."
+    },
+    {
+        icon: <ScanText size={32} strokeWidth={1.5} />,
+        title: "Posters and Banners",
+        description: "Designs for ads, events, promotions, and campaigns that align with your brand language."
     }
 ];
 
@@ -65,7 +106,7 @@ export default function ServicesPage() {
                             Our Services
                         </h1>
                         <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-                            Comprehensive brand management tailored to elevate your digital presence and drive tangible growth.
+                            Amrielle is a personal branding agency built on the belief that every story deserves to be seen in its best light.
                         </p>
                     </motion.div>
 

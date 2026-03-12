@@ -26,7 +26,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-lg text-foreground/80 max-w-2xl mx-auto"
                     >
-                        We'd love to hear from you. Whether you have a question about our services or are ready to elevate your brand.
+                        Reach out for personal branding, LinkedIn growth, content support, or profile management. We reply directly on call or email.
                     </motion.p>
                 </div>
                 <ContactSection />
