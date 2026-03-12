@@ -47,7 +47,7 @@ export default function Header() {
         >
             <Link href="/" className="flex items-center gap-3 text-2xl font-serif font-bold tracking-tight text-foreground cursor-pointer shrink-0">
                 <Image src={logoImg} alt="Amrielle Logo" className="w-10 h-10 rounded-xl" />
-                Amrielle.
+                Amrielle
             </Link>
 
             {/* Desktop Navigation */}

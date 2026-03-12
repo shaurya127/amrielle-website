@@ -18,7 +18,7 @@ export default function VisualExcellence() {
     };
 
     return (
-        <section className="w-full py-20 bg-background overflow-hidden">
+        <section className="hidden md:block w-full py-20 bg-background overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
